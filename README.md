@@ -122,7 +122,7 @@ Extract and keep folder ready.
 
 ## 🔹 Step 5: Install MySQL
 
-Download:
+Download: https://dev.mysql.com/downloads/installer/
 
 * MySQL
 
