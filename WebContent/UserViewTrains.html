@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View Trains | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8fbff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #00264d;
+}
+
+/* Header */
+header {
+  background-color: #00264d;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #ffffff;
+  color: #00264d;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+}
+.logout-btn:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #00264d;
+}
+
+.section-header p {
+  color: #555;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Table Styling */
+.table-container {
+  margin: 2rem auto;
+  max-width: 95%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.train-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* ✅ HEADER FIX — prevent hover white-out */
+.train-table thead {
+  background-color: #00264d;
+  color: white;
+}
+
+.train-table thead tr:hover {
+  background-color: #00264d !important; /* stays same on hover */
+  color: white !important;
+}
+
+/* ✅ Body rows hover remains light and modern */
+.train-table tbody tr:hover {
+  background-color: #f1f6ff; /* light blue hover for data rows */
+  transition: background-color 0.3s ease;
+}
+
+.train-table th,
+.train-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.train-table a {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.train-table a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.running-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #00264d;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Train Booking System</h1>
+    <nav>
+      <ul>
+        <li><a href="userhome">Home</a></li>
+        <li><a href="userviewtrainfwd" class="active">View Trains</a></li>
+        <li><a href="trainbwstnfwd">Trains Between Stations</a></li>
+        <li><a href="bookingdetails">Booking History</a></li>
+        <li><a href="fareenqfwd">Fare Enquiry</a></li>
+        <li><a href="useravailfwd">Seat Availability</a></li>
+        <li><a href="usersearchtrain">Search Train</a></li>
+        <li><a href="userprofile">Profile</a></li>
+        <li><a href="userlogout" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-header">
+      <h2>Available Trains</h2>
+      <p>Below are the available trains. You can check seat availability or book tickets directly.</p>
+    </section>
+
+    <!-- ✅ Dynamic content injected by servlet -->
+    <div id="dynamicTrainsSection"></div>
+  </main>
+
+  <footer>
+    &copy; 2026 Train Booking System | E-Trains User Dashboard
+  </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #00264d;
+  text-align: center;
+}
+
+/* Error Box */
+.error-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Error Code Circle */
+.error-code {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+/* Message */
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actions a {
+  text-decoration: none;
+  color: white;
+  background-color: #00a8e8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.actions a:hover {
+  background-color: #007bb5;
+}
+
+.actions .danger {
+  background-color: #e74c3c;
+}
+
+.actions .danger:hover {
+  background-color: #c0392b;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #555;
+}
+</style>
+</head>
+
+<body>
+  <div class="error-container">
+    <div class="error-code">⚠️ 404</div>
+    <div class="error-message">
+      Oops! Something went wrong.<br>
+      The page you’re looking for might be unavailable or moved.
+    </div>
+    <div class="actions">
+      <a href="userhome">🏠 Go Home</a>
+      <a href="javascript:history.back()" class="danger">🔄 Try Again</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Train Booking System | E-Trains System
+  </footer>
+</body>
+</html>

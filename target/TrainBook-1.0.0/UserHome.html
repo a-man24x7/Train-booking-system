@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Home | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #00264d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: white;
+  color: #00264d;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.welcome h2 {
+  color: #00264d;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #00a8e8;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #007bb5;
+}
+
+/* Feature Cards */
+.features {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #00264d;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.feature-link {
+  color: #00a8e8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.feature-link:hover {
+  color: #007bb5;
+}
+
+/* Footer */
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Railway Reservation System</h1>
+    <nav>
+      <ul>
+        <li><a href="userhome" class="active">Home</a></li>
+        <li><a href="userviewtrainfwd">View Trains</a></li>
+        <li><a href="trainbwstnfwd">Trains Between Stations</a></li>
+        <li><a href="bookingdetails">Booking History</a></li>
+        <li><a href="fareenqfwd">Fare Enquiry</a></li>
+        <li><a href="useravailfwd">Seat Availability</a></li>
+        <li><a href="usersearchtrain">Search Train</a></li>
+        <li><a href="userprofile">Profile</a></li>
+        <li><a href="userlogout" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h2>Welcome to E-Trains</h2>
+      <p>Book your tickets with ease, check train availability, view your booking history, and manage your profile — all in one place.</p>
+      <a href="userviewtrainfwd" class="btn-primary">Book Your Train</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>🚉 View Trains</h3>
+        <p>Find details of all available trains quickly.</p>
+        <a href="userviewtrainfwd" class="feature-link">View</a>
+      </div>
+
+      <div class="feature-card">
+        <h3>🧾 Booking History</h3>
+        <p>View your previous tickets and travel records.</p>
+        <a href="bookingdetails" class="feature-link">Check</a>
+      </div>
+
+      <div class="feature-card">
+        <h3>💺 Seat Availability</h3>
+        <p>Check real-time seat availability for your route.</p>
+        <a href="useravailfwd" class="feature-link">Check</a>
+      </div>
+    </section>
+  </main>
+  
+   <!-- Dynamic Welcome Message from Servlet -->
+  <div id="welcomeMessageContainer"></div>
+
+  <footer>
+    &copy; 2025 Railway Reservation System | All Rights Reserved
+  </footer>
+ 
+
+</body>
+</html>

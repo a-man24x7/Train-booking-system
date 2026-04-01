@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #004080, #00264d);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.main .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.main .menu a:hover {
+  background-color: white;
+  color: #00264d;
+}
+
+/* Login Card */
+.login-container {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #00264d;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #00a8e8;
+}
+
+.login-container input[type="submit"] {
+  background-color: #00a8e8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #007bb5;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Railway Reservation System</h1>
+    <div class="main">
+      <span class="menu"><a href="UserLogin.html">Login as User</a></span>
+      <span class="menu"><a href="UserRegister.html">New User Register</a></span>
+      <span class="menu"><a href="AdminLogin.html">Login as Admin</a></span>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form action="adminlogin" method="post">
+      <input type="text" name="uname" placeholder="Enter Admin Email ID" required>
+      <input type="password" name="pword" placeholder="Enter Password" required>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Railway Reservation System | All Rights Reserved
+  </footer>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(to right, #00a8e8, #003366);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+.main {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 8px 18px;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.main .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.main .menu a:hover {
+  background-color: white;
+  color: #003366;
+}
+
+/* Registration Card */
+.register-container {
+  background: white;
+  padding: 30px 28px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.register-container h2 {
+  color: #003366;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Form */
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.register-container label {
+  width: 100%;
+  text-align: left;
+  color: #003366;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="number"],
+.register-container input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.register-container input:focus {
+  border-color: #00a8e8;
+}
+
+.register-container input[type="submit"] {
+  background-color: #00a8e8;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 4px;
+}
+
+.register-container input[type="submit"]:hover {
+  background-color: #007bb5;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: white;
+  padding: 18px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Railway Reservation System</h1>
+    <div class="main">
+      <span class="menu"><a href="UserLogin.html">Login as User</a></span>
+      <span class="menu"><a href="UserRegister.html">New User Register</a></span>
+      <span class="menu"><a href="AdminLogin.html">Login as Admin</a></span>
+    </div>
+  </header>
+
+  <div class="register-container">
+    <h2>New User Registration</h2>
+    <form action="userreg" method="post">
+      <label>Email ID</label>
+      <input type="email" name="mailid" placeholder="Enter your email address" required>
+
+      <label>Password</label>
+      <input type="password" name="pword" placeholder="Enter your password" required>
+
+      <label>First Name</label>
+      <input type="text" name="firstname" placeholder="Enter your first name" required>
+
+      <label>Last Name</label>
+      <input type="text" name="lastname" placeholder="Enter your last name" required>
+
+      <label>Address</label>
+      <input type="text" name="address" placeholder="Enter your address" required>
+
+      <label>Phone Number</label>
+      <input type="number" name="phoneno" placeholder="Enter your phone number" required>
+
+      <label>Profile Photo</label>
+      <input type="file" name="userphoto">
+
+      <input type="submit" value="REGISTER ME">
+    </form>
+  </div>
+
+  <footer>
+    2025 Railway Reservation System | All Rights Reserved
+  </footer>
+</body>
+</html>

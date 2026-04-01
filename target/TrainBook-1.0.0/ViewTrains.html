@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View All Trains | E-Trains Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #00264d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: white;
+  color: #00264d;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: #00264d;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+/* Info Box */
+.info-box {
+  text-align: center;
+  margin: 1rem auto;
+  background: #e8f4ff;
+  color: #00264d;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Placeholder Container (kept for layout) */
+.table-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  color: #555;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Railway Reservation System</h1>
+    <nav>
+      <ul>
+        <li><a href="AdminHome.html">Home</a></li>
+        <li><a href="adminviewtrainfwd" class="active">View Trains</a></li>
+        <li><a href="adminsearchtrainfwd">Search Train</a></li>
+        <li><a href="addtrainfwd">Add Train</a></li>
+        <li><a href="cancletrainfwd">Delete Train</a></li>
+        <li><a href="updatetrain">Update Train</a></li>
+        <li><a href="adminlogout" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2 class="page-title">All Registered Trains</h2>
+
+  <div class="info-box">
+    Below is the list of all available trains in the system. You can manage or update them from the dashboard.
+  </div>
+
+  <!-- Placeholder container (optional, so servlet output appears below header) -->
+  <div class="table-container">
+    <!-- Dynamic train list will be displayed here by servlet -->
+  </div>
+
+  <footer>
+    &copy; 2025 Railway Reservation System | Admin Dashboard
+  </footer>
+</body>
+</html>

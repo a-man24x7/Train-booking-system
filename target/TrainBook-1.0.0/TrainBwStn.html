@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trains Between Stations | E-Trains</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #00264d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: white;
+  color: #00264d;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: #00264d;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+/* Info Box */
+.info-box {
+  text-align: center;
+  margin: 1rem auto;
+  background: #e8f4ff;
+  color: #00264d;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Search Form */
+.form-container {
+  background: white;
+  width: 400px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 500;
+  color: #00264d;
+  font-size: 0.95rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00a8e8;
+}
+
+input[type="submit"] {
+  background-color: #00a8e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #007bb5;
+}
+
+/* Footer */
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Railway Reservation System</h1>
+    <nav>
+      <ul>
+        <li><a href="userhome">Home</a></li>
+        <li><a href="userviewtrainfwd">View Trains</a></li>
+        <li><a href="trainbwstnfwd" class="active">Between Stations</a></li>
+        <li><a href="bookingdetails">Booking History</a></li>
+        <li><a href="fareenqfwd">Fare Enquiry</a></li>
+        <li><a href="useravailfwd">Seat Availability</a></li>
+        <li><a href="usersearchtrain">Search Train</a></li>
+        <li><a href="userprofile">Profile</a></li>
+        <li><a href="userlogout" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2 class="page-title">Trains Between Stations</h2>
+
+  <div class="info-box">
+    🚆 Find trains running between your selected source and destination stations.
+  </div>
+
+  <div class="form-container">
+    <form action="trainbwstn" method="post">
+      <label for="fromstation">From Station:</label>
+      <input type="text" id="fromstation" name="fromstation" placeholder="Enter Source Station" required>
+
+      <label for="tostation">To Station:</label>
+      <input type="text" id="tostation" name="tostation" placeholder="Enter Destination Station" required>
+
+      <input type="submit" value="Search Trains">
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Railway Reservation System | E-Trains User Dashboard
+  </footer>
+</body>
+</html>
